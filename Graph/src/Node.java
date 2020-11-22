@@ -1,9 +1,9 @@
 import java.util.Objects;
 /*
- * EXERCÍCIOPARCIAL02-BUSCAS
+ *
  * Autor: Hélio Potelicki
  */
-public class Vertex<V> {
+public class Node<V> {
     private V v;
     private boolean isVisited;
     private int level = 0;
@@ -32,18 +32,18 @@ public class Vertex<V> {
         isVisited = visited;
     }
 
-    public Vertex(V v) {
+    public Node(V v) {
         this.v = v;
     }
 
     @Override
     public String toString() {
-        return "< Vertex = " + v + " > ";
+        return "< Node = " + v + " > ";
     }
 
     @Override
     public boolean equals(Object a) {
-        Vertex<V> outro = (Vertex<V>) a;
+        Node<V> outro = (Node<V>) a;
         return this.v == outro.getV();
     }
 
